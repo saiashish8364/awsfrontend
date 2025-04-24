@@ -3,7 +3,8 @@ import "./App.css";
 
 function App() {
   async function apitest() {
-    const data = await fetch(process.env.REACT_APP_API_URL);
+    console.log(process.env.REACT_APP_API_URL);
+    const data = await fetch(`${process.env.REACT_APP_API_URL}`);
     // const data = await fetch("http://51.21.128.140/categories");
     console.log(data);
     const data1 = await data.json();
