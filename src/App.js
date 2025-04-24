@@ -4,7 +4,9 @@ import "./App.css";
 function App() {
   async function apitest() {
     const data = await fetch(process.env.REACT_APP_DBURL);
-    console.log(data);
+    // const data = await fetch("http://51.21.128.140/categories");
+    const data1 = await data.json();
+    console.log(data1);
   }
   apitest();
   return (
