@@ -2,7 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  console.log(process.env.REACT_APP_DBURL);
+  async function apitest() {
+    const data = await fetch(process.env.REACT_APP_DBURL);
+    console.log(data);
+  }
+  apitest();
   return (
     <div className="App">
       <header className="App-header">
