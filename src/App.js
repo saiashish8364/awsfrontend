@@ -5,10 +5,10 @@ function App() {
   async function apitest() {
     const data = await fetch(process.env.REACT_APP_API_URL);
     // const data = await fetch("http://51.21.128.140/categories");
-    // const data1 = await data.json();
-    // console.log(data1);
-    console.log(process.env.REACT_APP_API_URL);
     console.log(data);
+    const data1 = await data.json();
+    console.log(data1);
+    // console.log(process.env.REACT_APP_API_URL);
   }
   apitest();
   return (
