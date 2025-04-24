@@ -22,10 +22,14 @@ jobs:
         run: npm install
 
       - name: Build application with environment variables
+        run: |
+          echo "REACT_APP_API_URL=${REACT_APP_API_URL}"
+          echo "REACT_APP_ENVIRONMENT=${REACT_APP_ENVIRONMENT}"
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
           REACT_APP_ENVIRONMENT: ${{ secrets.REACT_APP_ENVIRONMENT }}
-        run: npm run build
+
+          run: npm run build
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
