@@ -7,6 +7,7 @@ function App() {
     // const data = await fetch("http://51.21.128.140/categories");
     // const data1 = await data.json();
     // console.log(data1);
+    console.log(process.env.REACT_APP_DBURL);
     console.log(data);
   }
   apitest();
